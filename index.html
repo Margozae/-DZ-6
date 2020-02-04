@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        function myMap ( firstArgument , secondArgument) {
+            var newArray = [];
+            for (let i = 0; i < firstArgument.length; i++) {
+                newArray[i] = secondArgument(firstArgument[i]);
+            }
+            return newArray;  
+        }
+
+        function involution (firstArgument) { 
+            return  firstArgument ** 2;
+        }
+
+        var result = myMap([4, 2, 3, 11, 8], involution);
+        console.log(result);
+
+    </script>
+</body>
+</html>
